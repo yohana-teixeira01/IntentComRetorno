@@ -22,5 +22,9 @@ class MainActivity2 : AppCompatActivity() {
             setResult(1,i)
             finish()
         }
+        binding.buttonCancelar.setOnClickListener {
+            setResult(2,i)
+            finish()
+        }
     }
 }

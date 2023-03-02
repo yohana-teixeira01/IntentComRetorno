@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
             if(it.data != null && it.resultCode == 1) {
                 nome = it.data?.getStringExtra("nome").toString()
                 binding.textNome.text = "Olá $nome "
-
+            }else if(it.data != null && it.resultCode == 2){
+                Toast.makeText(applicationContext, "Operação cancelada", Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(applicationContext, "Erro ao atualizar o nome", Toast.LENGTH_SHORT).show()
             }
